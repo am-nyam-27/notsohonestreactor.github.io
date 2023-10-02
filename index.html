@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meowing Cat</title>
+    <style>
+        /* Style for the cat animation */
+        #cat {
+            font-family: monospace;
+            white-space: pre;
+            font-size: 24px;
+            animation: meow 2s infinite alternate;
+        }
+
+        /* Define the keyframes for the animation */
+        @keyframes meow {
+            0% {
+                transform: scaleX(1);
+            }
+            100% {
+                transform: scaleX(-1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="cat">
+        /\_/\  
+        ( o.o ) 
+        > ^ <
+    </div>
+
+    <script>
+        // Function to play meow sound
+        function playMeow() {
+            const meowSound = new Audio('meow.mp3'); // Replace 'meow.mp3' with the path to your meow sound file
+            meowSound.play();
+        }
+
+        // Add a click event listener to the cat element
+        const cat = document.getElementById('cat');
+        cat.addEventListener('click', playMeow);
+    </script>
+</body>
+</html>
